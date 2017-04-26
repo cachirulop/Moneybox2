@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 David Magro Martin.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Public License v3.0
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/gpl.html
+  
+  Contributors:
+      David Magro Martin - initial API and implementation
+-->
+<resources>
+
+    <array name="euro_money_icons">
+        <item>@drawable/euro_001</item>
+        <item>@drawable/euro_002</item>
+        <item>@drawable/euro_005</item>
+        <item>@drawable/euro_010</item>
+        <item>@drawable/euro_020</item>
+        <item>@drawable/euro_050</item>
+        <item>@drawable/euro_1</item>
+        <item>@drawable/euro_2</item>
+        <item>@drawable/euro_5</item>
+        <item>@drawable/euro_10</item>
+        <item>@drawable/euro_20</item>
+        <item>@drawable/euro_50</item>
+        <item>@drawable/euro_100</item>
+        <item>@drawable/euro_200</item>
+        <item>@drawable/euro_500</item>
+    </array>
+    
+    <array name="euro_money_values">
+        <item>0.01</item>
+        <item>0.02</item>
+        <item>0.05</item>
+        <item>0.10</item>
+        <item>0.20</item>
+        <item>0.50</item>
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+    </array>
+    
+    <array name="euro_money_types">
+        <item>coin</item>
+        <item>coin</item>
+        <item>coin</item>
+        <item>coin</item>
+        <item>coin</item>
+        <item>coin</item>
+        <item>coin</item>
+        <item>coin</item>
+        <item>bill</item>
+        <item>bill</item>
+        <item>bill</item>
+        <item>bill</item>
+        <item>bill</item>
+        <item>bill</item>
+        <item>bill</item>
+    </array>
+    
+    <string name="euro_sign" translatable="false">€</string>
+    
+    <string name="currency_name" translatable="false">euro</string>
+    
+    <string name="money_bill" translatable="false">bill</string>
+    <string name="money_coin" translatable="false">coin</string>
+</resources>

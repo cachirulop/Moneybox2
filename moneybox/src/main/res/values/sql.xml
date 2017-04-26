@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 David Magro Martin.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Public License v3.0
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/gpl.html
+  
+  Contributors:
+      David Magro Martin - initial API and implementation
+-->
+<resources>
+
+    <!-- Creates the moneybox database. Only the movements table is needed -->
+    <string name="SQL_on_create" translatable="false">
+        CREATE TABLE moneyboxes (id_moneybox INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        						 description TEXT NOT NULL, 
+        						 creation_date TIMESTAMP NOT NULL DEFAULT current_timestamp);
+        
+        CREATE TABLE movements (id_movement INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        						id_moneybox INTEGER,
+                                amount NUMERIC NOT NULL,
+                                insert_date TIMESTAMP NOT NULL DEFAULT current_timestamp,
+                                get_date TIMESTAMP,
+                                description TEXT, 
+                                break_moneybox INTEGER,
+                                FOREIGN KEY(id_moneybox) REFERENCES moneyboxes(id_moneybox));
+
+        INSERT INTO moneyboxes (id_moneybox, description, creation_date) 
+        VALUES (1, \'Hucha\', strftime(\'%s\', \'now\') * 1000);
+    </string>
+    
+    <!-- Drop the movements table. -->
+    <string name="SQL_on_upgrade" translatable="false">
+        <![CDATA[
+        CREATE TABLE moneyboxes (id_moneybox INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        						 description TEXT NOT NULL, 
+        						 creation_date TIMESTAMP NOT NULL DEFAULT current_timestamp);
+        						 
+        INSERT INTO moneyboxes (id_moneybox, description, creation_date) 
+        VALUES (1, \'Hucha\', strftime(\'%s\', \'now\') * 1000);
+		
+		ALTER TABLE movements RENAME TO movements_backup;
+		
+        CREATE TABLE movements (id_movement INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        						id_moneybox INTEGER,
+                                amount NUMERIC NOT NULL,
+                                insert_date TIMESTAMP NOT NULL DEFAULT current_timestamp,
+                                get_date TIMESTAMP,
+                                description TEXT, 
+                                break_moneybox INTEGER,
+                                FOREIGN KEY(id_moneybox) REFERENCES moneyboxes(id_moneybox));
+
+		INSERT INTO movements (id_movement, id_moneybox, amount, insert_date, description, break_moneybox) 
+		SELECT id_movement, 1, amount, insert_date, description, break_moneybox FROM movements_backup;
+		
+		DROP TABLE movements_backup;
+		]]>
+    </string>
+    
+    <!-- Sum amount of all the movements, discounting the break moneybox and
+         get movements -->
+    <string name="SQL_sum_amount" translatable="false">
+        SELECT sum(amount) FROM movements 
+        WHERE get_date IS NULL AND
+            break_moneybox = 0 AND 
+            id_moneybox = ?;
+    </string>
+
+    <!-- Sum the amount of all the movement previous to a given date -->
+    <string name="SQL_sum_amount_before" translatable="false">
+        SELECT sum(amount) FROM movements 
+        WHERE get_date IS NULL AND 
+            break_moneybox = 0 AND
+            insert_date &lt; ? AND
+            id_moneybox = ?;
+    </string>
+            
+    <!-- Sum the amount of all the movement after a given date -->
+        <string name="SQL_sum_amount_after" translatable="false">
+        SELECT sum(amount) FROM movements 
+        WHERE get_date IS NULL AND 
+            break_moneybox = 0 AND
+            insert_date > ? AND
+            id_moneybox = ?;
+    </string>
+
+    <!-- Sum the amount of all the movement between two dates -->
+    <string name="SQL_sum_amount_by_dates" translatable="false">
+        SELECT sum(amount) FROM movements 
+        WHERE get_date IS NULL AND 
+            break_moneybox = 0 AND
+            insert_date between ? and ? AND
+            id_moneybox = ?;
+    </string>
+
+    <!-- Get the most recent break moneybox movement -->
+    <string name="SQL_last_break_movement" translatable="false">
+        SELECT * 
+        FROM movements 
+        WHERE insert_date = (
+                SELECT max(insert_date) 
+                FROM movements 
+                WHERE break_moneybox &lt;> 0 AND
+                    id_moneybox = ?
+              )
+        ORDER BY insert_date ASC;
+    </string>
+    
+    <!-- Get the next break moneybox movement from a given date -->
+    <string name="SQL_next_break_movement" translatable="false">
+        SELECT *
+        FROM movements 
+        WHERE insert_date = 
+        (SELECT min(insert_date)
+         FROM movements 
+         WHERE insert_date > ? AND break_moneybox &lt;> 0 AND id_moneybox = ?)
+    </string>
+    
+    <!-- Get the previous break moneybox movement to a given date -->
+    <string name="SQL_prev_break_movement" translatable="false">
+		SELECT *
+		FROM movements 
+		WHERE insert_date = 
+		(SELECT max(insert_date)
+		 FROM movements 
+		 WHERE insert_date &lt; ? AND break_moneybox &lt;> 0 AND id_moneybox = ?)
+    </string>    
+    
+    <!-- Get all the active movements, that is the movements that the get date
+         is null  -->
+    <string name="SQL_active_movements" translatable="false">
+        SELECT * 
+        FROM movements 
+        WHERE get_date IS NULL AND
+            id_moneybox = ?
+    </string>
+    
+    <!-- Get the active movements (get date is null) after a given date -->
+    <string name="SQL_active_movements_by_date" translatable="false">
+        SELECT * 
+        FROM movements 
+        WHERE insert_date > ? AND 
+            get_date IS NULL AND
+            id_moneybox = ?
+    </string>
+        
+</resources>

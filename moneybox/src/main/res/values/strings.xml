@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 David Magro Martin.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Public License v3.0
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/gpl.html
+  
+  Contributors:
+      David Magro Martin - initial API and implementation
+-->
+<resources>
+
+    <!-- I18n -->
+    <string name="app_name">Moneybox</string>
+    <string name="txtTotalTitle">Total:</string>
+    <string name="break_moneybox">Piggy bank is empty!</string>
+    <string name="break_moneybox_confirm">Break the moneybox, are you sure?</string>
+    <string name="delete_all_confirm">Delete all movements, are you sure?</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="insert_date">Insert date</string>
+    <string name="get_date">Get date</string>
+    <string name="amount">Amount</string>
+    <string name="description">Description</string>
+    <string name="change">Set</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="get_from_moneybox">Get it</string>
+    <string name="drop_to_moneybox_again">Drop to moneybox again</string>
+    <string name="delete">Delete</string>
+    <string name="error_date_incorrect_future">Invalid date, it can\'t be in the future.</string>
+    <string name="error_date_incorrect_after_get">Invalid date. Should be before get.</string>
+    <string name="error_date_incorrect_before_insert">Invalid date. Should be after insert.</string>
+    
+    <string name="msg_last_moneybox">Can\'t delete the last moneybox</string>
+    
+    <string name="drawer_open">Open left drawer</string>
+    <string name="drawer_close">Close left drawer</string>
+    
+	<string name="moneybox_select_moneybox">Select the active moneybox</string>
+    
+    <string name="empty_text_not_allowed">The text can\'t be empty</string>
+    
+    <string name="moneybox_new_moneybox">New moneybox</string>
+    <string name="moneybox_new_moneybox_description">Insert the name of the new moneybox</string>
+    <string name="moneybox_edit_moneybox">Change moneybox name</string>
+    <string name="moneybox_edit_moneybox_description">Change the name of the moneybox</string>
+    <string name="moneybox_delete">Delete moneybox</string>
+    <string name="moneybox_delete_confirm">Delete the current moneybox, are you sure?</string>
+    
+    <!-- Import/export messages -->
+    <string name="error_cant_read_file">Can\'t read file</string>
+    <string name="error_cant_write_file">Can\'t write file, read only path</string>
+    <string name="msg_database_exporting">Exporting database to %s</string>
+    <string name="msg_database_exported">Database exported successfully</string>
+    <string name="msg_database_importing">Importing database from %s</string>
+    <string name="msg_database_imported">Database imported</string>
+
+    <!-- tabs -->
+    <string name="tab_title_moneybox">Moneybox</string>
+    <string name="tab_title_movements">Movements</string>
+
+    <!-- Menu -->
+    <string name="menu_delete_all">Delete all movements</string>
+    <string name="menu_export_database">Export data</string>
+    <string name="menu_import_database">Import data</string>
+    <string name="menu_add_moneybox">Add new moneybox</string>
+    <string name="menu_del_moneybox">Delete current moneybox</string>
+    <string name="menu_edit_moneybox">Change moneybox name</string>
+    <string name="menu_break_moneybox">Break moneybox</string>
+    
+</resources>

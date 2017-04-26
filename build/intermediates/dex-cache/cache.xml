@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/david/.android/build-cache/b6a2413c851f2325134d1c8f7ab0b6b2c4f85718/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/classes_37ceab7e121f2d76968469db1a12b06633dc5728/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/.android/build-cache/f3015eb7668a7745c763c021b758fa9abd861ef6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6f5856807156d7034b376f5bd6f12a9df672ae78/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/git/Moneybox2/moneybox/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_fb017d0d167e757f964206697b82cebe31089d1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/opt/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-26.0.0-alpha1_34ae27457a6802e9849971fa041ad4b4f40986cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/.android/build-cache/ef58dd4c2c22970f7783b15d830475afa143283b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e2548c324fd2f28deaadff7deb8f83057e2975fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/.android/build-cache/29b8f8b46798d468ddac3d0e52e00b735848bbce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8a76ab0d012609782a79a6fb7e9f34b832ae528f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/.android/build-cache/b522ff3a0da7fda21a26f8e31b0a7ac0f53902d4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8afd4f81ee30234d5540631ad85302c810a11624/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/.android/build-cache/9529e8c836706210b28580e1c18b69147d355ee6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6c5a660ff7ff73dc393a7efa1d0cd6ba75b941d6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/david/git/Moneybox2/moneybox/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c04dd6341b68f6610095d57b6e4e82b4985cf123">
+        <dex dex="/home/david/git/Moneybox2/moneybox/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_bc35ff56ff82eef6721b71aa94d7a764019f223f/classes.dex" />
+    </item>
+
+</items>

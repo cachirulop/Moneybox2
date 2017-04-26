@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2012 David Magro Martin.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the GNU Public License v3.0
+  which accompanies this distribution, and is available at
+  http://www.gnu.org/licenses/gpl.html
+  
+  Contributors:
+      David Magro Martin - initial API and implementation
+-->
+<resources>
+    <string name="app_name">Hucha</string>
+    <string name="txtTotalTitle">Total:</string>
+    <string name="break_moneybox">Hucha vacía</string>
+    <string name="break_moneybox_confirm">¿Seguro que quieres vaciar la hucha?</string>
+    <string name="delete_all_confirm">¿Seguro que quieres borrar todo?</string>
+
+    <string name="date">Fecha</string>
+    <string name="time">Hora</string>
+    <string name="insert_date">Cuando se ha echado</string>
+    <string name="get_date">Cuando se ha sacado</string>
+    <string name="amount">Cantidad</string>
+    <string name="description">Descripción</string>
+        
+    <string name="change">Cambiar</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="get_from_moneybox">Coger</string>
+    <string name="drop_to_moneybox_again">Volver a echar a la hucha</string> 
+    <string name="delete">Borrar</string>
+
+    <string name="error_date_incorrect_future">Fecha no válida, no se puede usar una fecha futura</string>
+    <string name="error_date_incorrect_after_get">Fecha no válida, tiene que ser anterior a la fecha en la que se cogió</string>
+    <string name="error_date_incorrect_before_insert">Fecha no válida, tiene que ser posterior a la fecha en la que se ha echado</string>
+    
+    <string name="msg_last_moneybox">No se puede borrar la última hucha</string>
+    
+    <string name="drawer_open">Abrir el menú lateral</string>
+    <string name="drawer_close">Cerrar el menú lateral</string>
+    
+	<string name="moneybox_select_moneybox">Seleccionar hucha</string>
+    
+    <string name="empty_text_not_allowed">El texto no puede estar vacío</string>
+    
+    <string name="moneybox_new_moneybox">Nueva hucha</string>
+    <string name="moneybox_new_moneybox_description">Indique el nombre de la nueva hucha</string>
+    <string name="moneybox_edit_moneybox">Cambiar nombre</string>
+    <string name="moneybox_edit_moneybox_description">Indique el nuevo nombre de la hucha</string>
+    <string name="moneybox_delete">Borrar hucha</string>
+    <string name="moneybox_delete_confirm">¿Seguro que quieres borrar la hucha seleccionada?</string>
+    
+    <!-- Import/export messages -->
+    <string name="error_cant_read_file">No se puede leer el fichero, no existe</string>
+    <string name="error_cant_write_file">No se puede escribir el fichero, no tiene permisos</string>
+    <string name="msg_database_exporting">Exportando la base de datos al fichero %s</string>
+    <string name="msg_database_exported">Base de datos exportada correctamente</string>
+    <string name="msg_database_importing">Importando la base de datos de %s</string>
+    <string name="msg_database_imported">Base de datos importada correctamente</string>
+    
+    <!-- tabs -->
+    <string name="tab_title_moneybox">Hucha</string>
+    <string name="tab_title_movements">Movimientos</string>
+    
+    <!-- Menu -->
+    <string name="menu_break_moneybox">Romper la hucha</string>
+    <string name="menu_delete_all">Borrar todos los movimientos</string>
+    <string name="menu_export_database">Exportar datos</string>
+    <string name="menu_add_moneybox">Crear una hucha nueva</string>
+    <string name="menu_del_moneybox">Borrar la hucha seleccionada</string>
+    <string name="menu_edit_moneybox">Cambiar el nombre de la hucha</string>
+    <string name="menu_import_database">Importar datos</string>
+    
+</resources>
